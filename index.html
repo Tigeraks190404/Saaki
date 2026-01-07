@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saaki - Premium Liqueurs & Spirits</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">🍷</div>
+                    <div class="logo-text">
+                        <h1>Saaki</h1>
+                        <span class="tagline">Premium Spirits</span>
+                    </div>
+                </div>
+                
+                <div class="header-search">
+                    <input type="text" placeholder="Search for spirits, brands..." class="search-input">
+                    <button class="search-btn">🔍</button>
+                </div>
+
+                <div class="header-actions">
+                    <button class="header-icon-btn" title="Account">
+                        <span class="icon">👤</span>
+                        <span class="label">Account</span>
+                    </button>
+                    <button class="header-icon-btn" title="Wishlist">
+                        <span class="icon">❤️</span>
+                        <span class="label">Wishlist</span>
+                    </button>
+                    <div class="cart-icon-container">
+                        <button class="cart-icon" id="cartBtn" title="Shopping Cart">
+                            <span class="cart-icon-symbol">🛒</span>
+                            <span class="cart-label">Cart</span>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="nav" id="mainNav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <div class="nav-dropdown">
+                    <a href="#categories" class="nav-link">Categories <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="#whiskey">Whiskey</a>
+                        <a href="#vodka">Vodka</a>
+                        <a href="#rum">Rum</a>
+                        <a href="#gin">Gin</a>
+                        <a href="#tequila">Tequila</a>
+                        <a href="#wine">Wine</a>
+                    </div>
+                </div>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Age Verification Banner -->
+    <div class="age-banner">
+        <p>🔞 You must be 21 or older to purchase. By entering this site, you agree to our Terms & Conditions.</p>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Crafted Excellence, Delivered</h2>
+            <p>Curated selection of the world's finest spirits and liqueurs</p>
+            <a href="#products" class="btn-primary">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="whiskey">Whiskey</button>
+                <button class="filter-btn" data-category="vodka">Vodka</button>
+                <button class="filter-btn" data-category="rum">Rum</button>
+                <button class="filter-btn" data-category="gin">Gin</button>
+                <button class="filter-btn" data-category="tequila">Tequila</button>
+                <button class="filter-btn" data-category="wine">Wine</button>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Saaki</h3>
+                    <p>Your trusted source for premium spirits and liqueurs since 2020</p>
+                    <div class="trust-badges">
+                        <span class="badge">✓ Verified Seller</span>
+                        <span class="badge">✓ Secure Checkout</span>
+                        <span class="badge">✓ Fast Shipping</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <p>Email: support@saaki.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Hours: Mon-Fri 9AM-6PM EST</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Shipping & Returns</h4>
+                    <p>Free shipping on orders over $100</p>
+                    <p>30-day return policy</p>
+                    <p>ID verification required</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Saaki. All rights reserved. | Must be 21+ to purchase. | Drink Responsibly.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
